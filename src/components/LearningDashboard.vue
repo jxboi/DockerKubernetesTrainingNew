@@ -148,6 +148,9 @@ import KubernetesPods, {
 import KubernetesWorkload, {
   content as kubernetesWorkloadContent,
 } from './KubernetesWorkload.vue';
+import KubernetesQuiz, {
+  content as kubernetesQuizContent,
+} from './KubernetesQuiz.vue';
 
 export default {
   name: 'LearningDashboard',
@@ -162,6 +165,7 @@ export default {
     KubernetesObjects,
     KubernetesPods,
     KubernetesWorkload,
+    KubernetesQuiz,
   },
   data() {
     return {
@@ -181,6 +185,7 @@ export default {
         kubernetesObjects: kubernetesObjectsContent,
         kubernetesPods: kubernetesPodsContent,
         kubernetesWorkload: kubernetesWorkloadContent,
+        kubernetesQuiz: kubernetesQuizContent,
       },
       dockerSections: [
         { key: 'dockerIntroduction', title: 'Introduction to Docker' },
@@ -201,6 +206,7 @@ export default {
         { key: 'kubernetesObjects', title: 'Kubernetes Objects' },
         { key: 'kubernetesPods', title: 'Kubernetes Pods' },
         { key: 'kubernetesWorkload', title: 'Kubernetes Workload' },
+        { key: 'kubernetesQuiz', title: 'Kubernetes Quiz' },
       ],
     };
   },
@@ -218,6 +224,7 @@ export default {
         kubernetesObjects: 'KubernetesObjects',
         kubernetesPods: 'KubernetesPods',
         kubernetesWorkload: 'KubernetesWorkload',
+        kubernetesQuiz: 'KubernetesQuiz',
       };
       return componentMap[this.currentSection] || 'DockerIntroduction';
     },
