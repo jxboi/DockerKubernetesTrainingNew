@@ -42,18 +42,20 @@
     <p class="text-gray-700 leading-relaxed mb-3">
       The master node is responsible for managing the Kubernetes cluster. It controls the scheduling of applications, monitors the cluster state, and manages the API server, etcd (the cluster's database), and controller manager. 
       <br>
-      <div class="bg-yellow-100 border-l-4 border-yellow-500 text-yellow-700 p-4 mb-4">
-        It runs the <strong>kube-controller-manager</strong>, which regulates the state of the cluster by managing controllers, and the <strong>kube-scheduler</strong>, which assigns workloads to worker nodes based on resource availability.
-      </div>
     </p>
+    {{ edit_1 }}
+    <div class="bg-yellow-100 border-l-4 border-yellow-500 text-yellow-700 p-4 mb-4">
+      It runs the <strong>kube-controller-manager</strong>, which regulates the state of the cluster by managing controllers, and the <strong>kube-scheduler</strong>, which assigns workloads to worker nodes based on resource availability.
+    </div>
     <h4 class="text-md font-semibold text-light-gray bg-light-gray mb-1">Worker Node</h4>
     <p class="text-gray-700 leading-relaxed mb-2">
       Worker nodes are the machines that run the applications and services. They receive instructions from the master node and execute the workloads. Each worker node contains the necessary components to run pods, including the container runtime, kubelet, and kube-proxy. 
       <br>
-      <div class="bg-yellow-100 border-l-4 border-yellow-500 text-yellow-700 p-4 mb-4">
-        Worker nodes also run the <strong>kubelet</strong>, which ensures that containers are running in a pod, and the <strong>kube-proxy</strong>, which manages network communication to and from the pods.
-      </div>
     </p>
+    {{ edit_1 }}
+    <div class="bg-yellow-100 border-l-4 border-yellow-500 text-yellow-700 p-4 mb-4">
+      Worker nodes also run the <strong>kubelet</strong>, which ensures that containers are running in a pod, and the <strong>kube-proxy</strong>, which manages network communication to and from the pods.
+    </div>
     <h3 class="text-xl font-semibold text-blue-600 mb-2">Control Plane</h3>
     <p class="text-gray-700 leading-relaxed mb-4">
       The control plane is a set of components that manage the Kubernetes cluster. It includes the master node and is responsible for maintaining the desired state of the cluster, making decisions about scheduling, scaling, and managing the lifecycle of applications.
